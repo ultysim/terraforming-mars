@@ -31,10 +31,10 @@ export function buildNewGameConfig(overrides: PartialNewGameConfig): NewGameConf
 
     clonedGamedId: overrides.clonedGamedId,
 
-    undoOption: overrides.undoOption ?? false,
+    undoOption: overrides.undoOption ?? true,
     showTimers: overrides.showTimers ?? true,
     fastModeOption: overrides.fastModeOption ?? false,
-    showOtherPlayersVP: overrides.showOtherPlayersVP ?? false,
+    showOtherPlayersVP: overrides.showOtherPlayersVP ?? true,
 
     aresExtremeVariant: overrides.aresExtremeVariant ?? false,
     politicalAgendasExtension: overrides.politicalAgendasExtension ?? 'Standard',
@@ -48,8 +48,8 @@ export function buildNewGameConfig(overrides: PartialNewGameConfig): NewGameConf
     ceosDraftVariant: overrides.ceosDraftVariant ?? false,
     startingCorporations: overrides.startingCorporations ?? 2,
     shuffleMapOption: overrides.shuffleMapOption ?? false,
-    randomMA: overrides.randomMA ?? 'No randomization',
-    includeFanMA: overrides.includeFanMA ?? false,
+    randomMA: overrides.randomMA ?? 'Full random',
+    includeFanMA: overrides.includeFanMA ?? true,
     soloTR: overrides.soloTR ?? false,
     customCorporationsList: overrides.customCorporationsList ?? [],
     bannedCards: overrides.bannedCards ?? [],

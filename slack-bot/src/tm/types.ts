@@ -57,11 +57,11 @@ export const EXPANSION_LABELS: Record<Expansion, string> = {
 
 export const DEFAULT_EXPANSIONS: Record<Expansion, boolean> = {
   corpera: true,
-  promo: false,
-  venus: false,
-  colonies: false,
-  prelude: false,
-  prelude2: false,
+  promo: true,
+  venus: true,
+  colonies: true,
+  prelude: true,
+  prelude2: true,
   turmoil: false,
   community: false,
   ares: false,
@@ -113,7 +113,7 @@ export interface EscapeVelocityOptions {
 }
 
 export const DEFAULT_ESCAPE_VELOCITY: EscapeVelocityOptions = {
-  thresholdMinutes: 30,
+  thresholdMinutes: 25,
   bonusSectionsPerAction: 2,
   penaltyPeriodMinutes: 2,
   penaltyVPPerPeriod: 1,
