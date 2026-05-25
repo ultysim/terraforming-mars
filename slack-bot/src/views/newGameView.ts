@@ -169,7 +169,7 @@ function boardBlock(): KnownBlock {
     element: {
       type: 'static_select',
       action_id: ActionIds.board,
-      initial_option: options[0]!,
+      initial_option: options[11]!,
       options,
     },
   };
