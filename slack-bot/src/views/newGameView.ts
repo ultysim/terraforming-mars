@@ -299,7 +299,7 @@ function escapeVelocityBlock(): KnownBlock {
     element: {
       type: 'radio_buttons',
       action_id: ActionIds.escapeVelocity,
-      initial_option: off,
+      initial_option: on,
       options: [off, on],
     },
   };
