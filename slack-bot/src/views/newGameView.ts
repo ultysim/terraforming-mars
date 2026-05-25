@@ -62,8 +62,8 @@ export const TOGGLES = [
 ] as const;
 export type ToggleKey = typeof TOGGLES[number]['value'];
 
-const DEFAULT_TOGGLES: ReadonlyArray<ToggleKey> = ['draftVariant', 'showTimers'];
-const DEFAULT_EXPANSION_KEYS: ReadonlyArray<string> = ['corpera', 'prelude'];
+const DEFAULT_TOGGLES: ReadonlyArray<ToggleKey> = ['undoOption', 'draftVariant', 'showTimers', 'showOtherPlayersVP'];
+const DEFAULT_EXPANSION_KEYS: ReadonlyArray<string> = ['corpera', 'promo', 'venus', 'colonies', 'prelude', 'prelude2'];
 
 export interface PrivateMetadata {
   /** Slack user who ran /tm-newgame, used for the final summary DM. */
@@ -290,7 +290,7 @@ function startingCeosBlock(): KnownBlock {
 
 function escapeVelocityBlock(): KnownBlock {
   const off = {text: {type: 'plain_text' as const, text: 'Off'}, value: 'off'};
-  const on = {text: {type: 'plain_text' as const, text: 'On (30 min threshold)'}, value: 'on'};
+  const on = {text: {type: 'plain_text' as const, text: 'On (25 min threshold, +2s/action)'}, value: 'on'};
   return {
     type: 'input',
     block_id: BlockIds.escapeVelocity,
