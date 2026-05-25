@@ -1,0 +1,28 @@
+display_information:
+  name: Terraforming Mars
+  description: Spin up a new Terraforming Mars game from Slack and DM each player their link.
+  background_color: "#1f2937"
+features:
+  bot_user:
+    display_name: terraforming-mars
+    always_online: true
+  slash_commands:
+    - command: /tm-newgame
+      url: https://example.com/api/slack/events
+      description: Create a new Terraforming Mars game
+      usage_hint: "(opens a modal)"
+      should_escape: false
+oauth_config:
+  scopes:
+    bot:
+      - commands
+      - chat:write
+      - im:write
+      - users:read
+settings:
+  interactivity:
+    is_enabled: true
+    request_url: https://example.com/api/slack/events
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false

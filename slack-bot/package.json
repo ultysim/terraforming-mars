@@ -1,0 +1,26 @@
+{
+  "name": "tm-slack-bot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Slack /tm-newgame slash command for Terraforming Mars (Vercel serverless).",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit -p tsconfig.json",
+    "dev": "vercel dev",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@slack/bolt": "^4.4.0",
+    "@vercel/functions": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@vercel/node": "^5.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
